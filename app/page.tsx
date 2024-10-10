@@ -2,7 +2,7 @@ import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import Layout from "./components/Layout";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils";
+
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
@@ -11,7 +11,6 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
-import { ModeToggle } from "./components/Theme";
 import { TimelineCom } from "./components/Timeline";
 import { Contact } from "./components/Contact";
 

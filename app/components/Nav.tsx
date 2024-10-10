@@ -1,18 +1,14 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image";
 import Link from "next/link";
-import React, { Fragment } from "react";
-import { cn } from "@/lib/utils"
 import { ModeToggle } from "./Theme";
 
 export function Nav() {
