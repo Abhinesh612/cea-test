@@ -18,7 +18,7 @@ import { Contact } from "./components/Contact";
 export default function Home() {
   return (
     <Layout>
-      <main className="w-fill md:h-screen flex md:items-center justify-center pt-[90px] relative dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+      <main className="w-fill md:h-screen flex md:items-center justify-center pt-[90px] max-sm:pt-[60px] relative dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_60%,black)] max-sm:[mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div>
         <div className="container grid lg:grid-cols-[0.75fr_1fr] gap-8 md:gap-12">
           <div className="flex flex-col justify-start pt-6 max-md:ml-3">

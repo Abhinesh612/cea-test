@@ -13,7 +13,7 @@ import { ModeToggle } from "./Theme";
 
 export function Nav() {
   return (
-    <div className="fixed z-50 w-full h-[90px] flex items-center justify-center backdrop-blur">
+    <div className="fixed z-50 w-full h-[90px] max-sm:h-[60px] flex items-center justify-center backdrop-blur">
       <div className="w-full h-full flex items-center justify-between lg:container">
         <div className="flex items-center">
           <Image
