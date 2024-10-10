@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Layout from "../components/Layout";
 import { PostCard } from "./postCard";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
