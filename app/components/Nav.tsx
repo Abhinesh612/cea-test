@@ -37,7 +37,7 @@ export function Nav() {
               <ModeToggle />
             </div>
             <NavItem label="Home" href="/" />
-            <NavItem label="Posts" href="/" />
+            <NavItem label="Posts" href="/posts" />
 
             <NavigationMenuItem>
               <NavigationMenuTrigger className="font-semibold font-lg bg-transparent">Depts.</NavigationMenuTrigger>

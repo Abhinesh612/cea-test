@@ -13,6 +13,7 @@ import {
 } from "@tabler/icons-react";
 import { TimelineCom } from "./components/Timeline";
 import { Contact } from "./components/Contact";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -29,8 +30,12 @@ export default function Home() {
             <p className="z-20 max-lg:hidden">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
             <div className="z-20 flex gap-4 mt-6">
-              <Button className="rounded-3xl">Posts</Button>
-              <Button variant="outline" className="rounded-3xl">News</Button>
+              <Link href="/posts">
+                <Button className="rounded-3xl">Posts</Button>
+              </Link>
+              <Link href="#news-section">
+                <Button variant="outline" className="rounded-3xl">News</Button>
+              </Link>
             </div>
           </div>
 
@@ -50,7 +55,7 @@ export default function Home() {
     NEWS subsection
 
  */}
-      <main className="w-full flex flex justify-center mb-8 md:mb-12 max-md:mt-8">
+      <main id="news-section" className="w-full flex flex justify-center mb-8 md:mb-12 max-md:mt-8">
         <div className="container">
           <div className="w-full flex justify-center md:mb-6">
             <h2 className="text-6xl font-bold inline-block text-primary">N</h2>
