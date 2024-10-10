@@ -1,101 +1,188 @@
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import Layout from "./components/Layout";
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import React from "react";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import {
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
+import { ModeToggle } from "./components/Theme";
+import { TimelineCom } from "./components/Timeline";
+import { Contact } from "./components/Contact";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Layout>
+      <main className="w-fill md:h-screen flex md:items-center justify-center pt-[90px] relative dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_60%,black)]"></div>
+        <div className="container grid lg:grid-cols-[0.75fr_1fr] gap-8 md:gap-12">
+          <div className="flex flex-col justify-start pt-6 max-md:ml-3">
+            {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div> */}
+            <h1 className="z-20 text-5xl md:text-7xl font-bold">Civil Engineering</h1>
+            <h1 className="z-20 text-5xl md:text-7xl font-bold">Association</h1>
+            <p className="z-20">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="z-20 flex gap-4 mt-6">
+              <Button className="rounded-3xl">Posts</Button>
+              <Button variant="outline" className="rounded-3xl">News</Button>
+            </div>
+          </div>
+
+          <div>
+            <AspectRatio ratio={5 / 4}>
+              <Image
+                src="/images/bg1.jpg"
+                alt="Image"
+                layout="fill"
+                className="rounded-md object-cover" />
+            </AspectRatio>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      {/* 
+
+    NEWS subsection
+
+ */}
+      <main className="w-full flex flex justify-center mb-8 md:mb-12 max-md:mt-8">
+        <div className="container">
+          <div className="w-full flex justify-center md:mb-6">
+            <h2 className="text-6xl font-bold inline-block text-primary">N</h2>
+            <h2 className="text-6xl font-bold inline-block">EWS</h2>
+          </div>
+          <BentoGridSecondDemo />
+        </div>
+      </main>
+      {/* 
+
+    NEWS subsection
+
+ */}
+
+      <main className="w-full flex flex-col items-center mb-12">
+        <div className="container">
+          <div className="w-full flex justify-center mb-6">
+            <h2 className="text-6xl font-bold inline-block">ABOUT</h2>
+          </div>
+        </div>
+        <div className="w-full flex flex justify-center">
+          <div className="container mx-4 flex justify-center">
+            <p className="lg:w-[70%] lg:text-lg">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          </div>
+        </div>
+      </main>
+
+      {/*
+      Timeline 
+       */}
+
+      <main className="w-full flex flex-col items-center mt-1 mb-12">
+        <div className="container pb-0">
+          <div className="w-full flex justify-center">
+            <h2 className="text-6xl font-bold inline-block text-primary">TIMELINE</h2>
+          </div>
+        </div>
+        <TimelineCom />
+      </main>
+
+      {/*
+      Contact Section 
+       */}
+      <main className="w-full flex flex-col items-center mt-1 mb-18 pb-12">
+        <div className="container mb-6 sm:mb-12">
+          <div className="w-full flex justify-center">
+            <h2 className="text-5xl sm:text-6xl font-bold inline-block">CONTACT</h2>
+            <h2 className="text-5xl sm:text-6xl font-bold inline-block text-primary">&nbsp;US</h2>
+          </div>
+        </div>
+        {/* <div className="flex justify-center items-center"> */}
+        <div className="w-full flex items-center justify-center">
+          <div className="grid xl:grid-cols-[1.25fr_1fr] gap-24">
+            <div className="h-[580px] w-full relative max-xl:hidden">
+              <Image
+                src="/images/contact.jpg"
+                alt="Image"
+                layout="fill"
+                className="rounded-md object-cover" />
+            </div>
+            <Contact />
+          </div>
+        </div>
+      </main>
+
+    </Layout>
   );
 }
+
+function BentoGridSecondDemo() {
+  return (
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+      {items.map((item, i) => (
+        <BentoGridItem
+          key={i}
+          title={item.title}
+          description={item.description}
+          header={item.header}
+          className={item.className}
+          icon={item.icon}
+        />
+      ))}
+    </BentoGrid>
+  );
+}
+
+// const Skeleton = () => (
+//   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+// );
+
+const Skeleton = () => (
+  <div className="relative w-full h-full rounded-xl overflow-hidden">
+    <Image
+      src="/images/bg.jpg"
+      alt="skeleton image"
+      layout="fill"
+      objectFit="covers"
+      className="rounded-md"
+    />
+  </div>
+)
+const items = [
+  {
+    title: "The Dawn of Innovation",
+    description: "Explore the birth of groundbreaking ideas and inventions.",
+    header: <Skeleton />,
+    className: "md:col-span-2",
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Digital Revolution",
+    description: "Dive into the transformative power of technology.",
+    header: <Skeleton />,
+    className: "md:col-span-1",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Art of Design",
+    description: "Discover the beauty of thoughtful and functional design.",
+    header: <Skeleton />,
+    className: "md:col-span-1",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Power of Communication",
+    description:
+      "Understand the impact of effective communication in our lives.",
+    header: <Skeleton />,
+    className: "md:col-span-2",
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+
+];
