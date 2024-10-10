@@ -19,12 +19,14 @@ export default function Home() {
   return (
     <Layout>
       <main className="w-fill md:h-screen flex md:items-center justify-center pt-[90px] relative dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_60%,black)]"></div>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_60%,black)] max-sm:[mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div>
         <div className="container grid lg:grid-cols-[0.75fr_1fr] gap-8 md:gap-12">
           <div className="flex flex-col justify-start pt-6 max-md:ml-3">
             <h1 className="z-20 text-5xl md:text-7xl font-bold">Civil Engineering</h1>
             <h1 className="z-20 text-5xl md:text-7xl font-bold">Association</h1>
-            <p className="z-20">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+
+            <p className="z-20 space-y-1">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <p className="z-20  space-y-1 max-md:hidden">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
             <div className="z-20 flex gap-4 mt-6">
               <Button className="rounded-3xl">Posts</Button>
@@ -59,7 +61,7 @@ export default function Home() {
       </main>
       {/* 
 
-    NEWS subsection
+    ABOUT subsection
 
  */}
 
@@ -67,6 +69,7 @@ export default function Home() {
         <div className="container">
           <div className="w-full flex justify-center mb-6">
             <h2 className="text-6xl font-bold inline-block">ABOUT</h2>
+            <h2 className="text-6xl font-bold inline-block text-primary">&nbsp;US</h2>
           </div>
         </div>
         <div className="w-full flex flex justify-center">
