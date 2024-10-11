@@ -11,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./Theme";
 
+import { MobileNav } from "./MobileNav";
+
 export function Nav() {
   return (
     <div className="fixed z-50 w-full h-[90px] max-lg:h-[60px] flex items-center justify-center backdrop-blur">
@@ -21,7 +23,7 @@ export function Nav() {
             alt="logo"
             width={90}
             height={90}
-            className="w-[80%] sm:w-[80%] lg:w-auto"
+            className="w-[50%] md:w-[70%] lg:w-auto"
           />
           <div className="max-lg:hidden">
             <h1 className="text-lg font-semibold leading-5">Civil Engineering Association</h1>
@@ -30,40 +32,52 @@ export function Nav() {
           </div>
         </div>
 
-        <NavigationMenu className="md:px-6">
-          <NavigationMenuList>
+        <div className="max-md:hidden">
+          <MainNav />
+        </div>
 
-            <div className="">
-              <ModeToggle />
-            </div>
-            <NavItem label="Home" href="/" />
-            <NavItem label="Posts" href="/posts" />
+        <div className="md:hidden flex items-center justify-between gap-4 pr-1">
+          <ModeToggle />
+          <MobileNav />
+        </div>
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-semibold font-lg bg-transparent">Depts.</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-3 md:w-[300px]">
-
-                  <ListItem title="Strutural Engineering">
-                    asdf adsfasasd fasdf asdfaf
-                  </ListItem>
-                  <ListItem title="Water Resource Engineering">
-                    asdf adsfasasd fasdf asdfaf
-                  </ListItem>
-                  <ListItem title="Geotechnical Engineering">
-                    asdf adsfasasd fasdf asdfaf
-                  </ListItem>
-
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-          </NavigationMenuList>
-        </NavigationMenu>
       </div>
     </div>
   );
 }
+
+const MainNav = () => (
+  <NavigationMenu className="md:px-6">
+    <NavigationMenuList>
+
+      <div className="">
+        <ModeToggle />
+      </div>
+      <NavItem label="Home" href="/" />
+      <NavItem label="Posts" href="/posts" />
+
+      <NavigationMenuItem>
+        <NavigationMenuTrigger className="font-semibold font-lg bg-transparent">Depts.</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <ul className="grid gap-3 p-3 md:w-[300px]">
+
+            <ListItem title="Strutural Engineering">
+              asdf adsfasasd fasdf asdfaf
+            </ListItem>
+            <ListItem title="Water Resource Engineering">
+              asdf adsfasasd fasdf asdfaf
+            </ListItem>
+            <ListItem title="Geotechnical Engineering">
+              asdf adsfasasd fasdf asdfaf
+            </ListItem>
+
+          </ul>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+
+    </NavigationMenuList>
+  </NavigationMenu>
+)
 
 const NavItem = ({ label, href }: { label: string, href: string }) => (
   <NavigationMenuItem key={label} className="">
