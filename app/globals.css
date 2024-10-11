@@ -87,6 +87,6 @@ body {
 
 @layer components {
   .text-primary {
-    color: var(--primary);
+    color: var(--primary) !important;
   }
 }

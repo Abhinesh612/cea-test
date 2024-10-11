@@ -5,11 +5,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+  // navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { ModeToggle } from "./Theme";
+import NavItem from "./ui/NavItemC";
 
 import { MobileNav } from "./MobileNav";
 
@@ -79,15 +80,17 @@ const MainNav = () => (
   </NavigationMenu>
 )
 
-const NavItem = ({ label, href }: { label: string, href: string }) => (
-  <NavigationMenuItem key={label} className="">
-    <Link href={href} legacyBehavior passHref>
-      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} font-semibold font-lg bg-transparent`}>
-        {label}
-      </NavigationMenuLink>
-    </Link>
-  </NavigationMenuItem>
-)
+// const NavItem = ({ label, href }: { label: string, href: string }) => {
+//   return (
+//     <NavigationMenuItem key={label} className="">
+//       <Link href={href} legacyBehavior passHref>
+//         <NavigationMenuLink className={`${navigationMenuTriggerStyle()} font-semibold font-lg bg-transparent`}>
+//           {label}
+//         </NavigationMenuLink>
+//       </Link>
+//     </NavigationMenuItem>
+//   );
+// }
 
 const ListItem = ({ title, children }: { title: string, children: React.ReactNode }) => {
   return (

@@ -1,11 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export function PostCard() {
     return (
         <div className="max-w-xs w-full group/card">
-            <div
+            <Link href='/articles/cea/1'
                 className={cn(
                     " cursor-pointer overflow-hidden relative card h-96 max-sm:h-78 w-auto rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
                     "bg-[url(https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80)] bg-cover"
@@ -36,7 +37,7 @@ export function PostCard() {
                         suitable for blogs.
                     </p>
                 </div>
-            </div>
-        </div>
+            </Link>
+        </div >
     );
 }

@@ -102,7 +102,7 @@ export default function Home() {
       {/*
       Contact Section 
        */}
-      <main className="w-full flex flex-col items-center mt-1 mb-18 pb-12">
+      <main id="contact-section" className="w-full flex flex-col items-center mt-1 mb-18 pb-12">
         <div className="container mb-6 sm:mb-12">
           <div className="w-full flex justify-center">
             <h2 className="text-5xl sm:text-6xl font-bold inline-block">CONTACT</h2>

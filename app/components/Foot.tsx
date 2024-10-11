@@ -1,6 +1,9 @@
+"use client";
+
 import { InstagramLogoIcon, 
     LinkedInLogoIcon,
- } from "@radix-ui/react-icons"
+ } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export function Footer() {
     return (
@@ -20,23 +23,23 @@ export function Footer() {
 
                     <div className="grid grid-cols-3 gap-6 items-start mt-10 md:mt-0">
                         <div className="flex justify-center space-y-4 flex-col mt-4">
-                            <h1>Home</h1>
-                            <h1>Posts</h1>
-                            <h1>Contact Us</h1>
+							<Link href="/"><span>Home</span></Link>
+							<Link href="/posts"><span>Posts</span></Link>
+							<Link href="/"><span>Contact Us</span></Link>
                         </div>
                         <div className="flex justify-center space-y-4 flex-col mt-4">
-                            <h1>Structureal Engg.</h1>
-                            <h1>Water Resource Engg.</h1>
-                            <h1>Geotechnical Engg.</h1>
+							<Link href="/"><span>Structural Engg.</span></Link>
+							<Link href="/"><span>Water Resource Engg.</span></Link>
+							<Link href="/"><span>Geotechnical Engg.</span></Link>
                         </div>
                         <div className="flex justify-center space-y-4 flex-col mt-4">
                             <div className="flex items-center justify-start gap-1">
                                 <InstagramLogoIcon className="" />
-                                <span>Instgram</span>
+								<Link href="/"><span>Instagram</span></Link>
                             </div>
                             <div className="flex items-center justify-start gap-1">
                                 <LinkedInLogoIcon className="" />
-                                <span>LinkedIn</span>
+								<Link href="/"><span>LinkedIn</span></Link>
                             </div>
                         </div>
                     </div>
