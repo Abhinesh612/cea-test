@@ -64,6 +64,7 @@ export function MobileNav() {
                     <div className="flex flex-col space-y-3" >
                         <MobileLink href="/" onOpenChange={setOpen} className="font-semibold font-lg">Home</MobileLink>
                         <MobileLink href="/posts" onOpenChange={setOpen} className="font-semibold font-lg">Posts</MobileLink>
+                        <MobileLink href="/gate" onOpenChange={setOpen} className="font-semibold font-lg">Gate</MobileLink>
 
                         <div className="">
                             <span>Depts.</span>
