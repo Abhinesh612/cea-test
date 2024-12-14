@@ -12,7 +12,7 @@ export default function GateMockExam() {
             GATE Mock Examination 2025
           </CardTitle>
           <p className="text-xl font-medium text-center text-rose-100">
-            For Civil Engineering 3rd and 4th Year Students
+            For Civil Engineering Students
           </p>
         </CardHeader>
         <CardContent className="flex-grow flex flex-col md:flex-row gap-8 p-8 overflow-hidden">
