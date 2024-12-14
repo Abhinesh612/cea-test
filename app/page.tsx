@@ -216,16 +216,16 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "CEA annual magzine",
+    description: "A Journey Through Milestones: CEA Annual Magazine 2024",
     header: <Skeleton src="/images/mag.png" />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Apptitude Test",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "Testing Talent, Shaping Futures: CEA's Apptitude Test 2023",
     header: <Skeleton src="/images/gate-2023.jpeg" />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
