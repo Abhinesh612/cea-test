@@ -108,7 +108,8 @@ function ContactForm() {
                     description: result.message || "There was an error with your submission.",
                 });
             }
-        } catch (error) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (error: unknown) {
             toast({
                 title: "Error",
                 description: "An unexpected error occurred. Please try again later.",
