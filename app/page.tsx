@@ -33,6 +33,12 @@ export default function Home() {
             <p className="z-20 max-lg:hidden">Through its efforts, CEA NIT Raipur strives to empower students to excel academically, professionally, and socially, while promoting a
               culture of collaboration and leadership in the field of civil engineering.</p>
 
+            <Link href="/gate">
+              <h3 className="mt-4 text-primary text-3xl py-x font-bold">
+                Register for the GATE Mock Exam
+              </h3>
+            </Link>
+
             <div className="z-20 flex gap-4 mt-6">
               <Link href="/posts">
                 <Button className="rounded-3xl">Posts</Button>

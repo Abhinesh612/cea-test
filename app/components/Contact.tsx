@@ -65,17 +65,60 @@ function ContactForm() {
         resolver: zodResolver(FormSchema),
     });
 
-    function onSubmit(data: z.infer<typeof FormSchema>) {
-        console.log("Form submitted with data:", data);
-        toast({
-            title: "You submitted the following values:",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-black bg-sslate-950 p-4">
-                    <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-                </pre>
-            ),
-        });
+    // function onSubmit(data: z.infer<typeof FormSchema>) {
+    //     console.log("Form submitted with data:", data);
+    //     toast({
+    //         title: "You submitted the following values:",
+    //         description: (
+    //             <pre className="mt-2 w-[340px] rounded-md bg-black bg-sslate-950 p-4">
+    //                 <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+    //             </pre>
+    //         ),
+    //     });
+    // }
+
+    async function onSubmit(data: z.infer<typeof FormSchema>) {
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    message: data.mesg,
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                toast({
+                    title: "Form submitted successfully!",
+                    description: (
+                        <pre className="mt-2 w-[340px] rounded-md bg-black p-4">
+                            <code className="text-white">{JSON.stringify("Submited", null, 2)}</code>
+                        </pre>
+                    ),
+                });
+            } else {
+                toast({
+                    title: "Submission failed",
+                    description: result.message || "There was an error with your submission.",
+                });
+            }
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: "An unexpected error occurred. Please try again later.",
+            });
+        }
     }
+
+
+
+    
 
     return (
         <Form {...form}>
