@@ -55,6 +55,7 @@ const MainNav = () => (
         <ModeToggle />
       </div>
       <NavItem label="Home" href="/" />
+      <NavItem label="Gate" href="/gate" />
       <NavItem label="Posts" href="/posts" />
 
       <NavigationMenuItem>
@@ -63,13 +64,13 @@ const MainNav = () => (
           <ul className="grid gap-3 p-3 md:w-[300px]">
 
             <ListItem title="Strutural Engineering">
-              asdf adsfasasd fasdf asdfaf
+              {/* asdf adsfasasd fasdf asdfaf */}
             </ListItem>
             <ListItem title="Water Resource Engineering">
-              asdf adsfasasd fasdf asdfaf
+              {/* asdf adsfasasd fasdf asdfaf */}
             </ListItem>
             <ListItem title="Geotechnical Engineering">
-              asdf adsfasasd fasdf asdfaf
+              {/* asdf adsfasasd fasdf asdfaf */}
             </ListItem>
 
           </ul>
@@ -92,7 +93,7 @@ const MainNav = () => (
 //   );
 // }
 
-const ListItem = ({ title, children }: { title: string, children: React.ReactNode }) => {
+const ListItem = ({ title, children }: { title: string, children?: React.ReactNode }) => {
   return (
     <li>
       <NavigationMenuLink asChild className="">

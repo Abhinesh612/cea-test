@@ -26,8 +26,12 @@ export default function Home() {
             <h1 className="z-20 text-5xl md:text-7xl font-bold">Civil Engineering</h1>
             <h1 className="z-20 text-5xl md:text-7xl font-bold">Association</h1>
 
-            <p className="z-20">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            <p className="z-20 max-lg:hidden">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <p className="z-20">CEA NIT Raipur is the cornerstone of the Civil Engineering Department
+              at the National Institute of Technology, Raipur. It serves as the principal
+              body responsible for orchestrating and executing various events and
+              activities within the Civil Engineering Department.</p>
+            <p className="z-20 max-lg:hidden">Through its efforts, CEA NIT Raipur strives to empower students to excel academically, professionally, and socially, while promoting a
+              culture of collaboration and leadership in the field of civil engineering.</p>
 
             <div className="z-20 flex gap-4 mt-6">
               <Link href="/posts">
@@ -78,10 +82,29 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full flex flex justify-center">
-          <div className="container mx-4 flex justify-center">
-            <p className="lg:w-[70%] lg:text-lg">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet, comes from a line in section 1.10.32.
+          <div className="container mx-4 flex justify-center items-center flex-col">
+            <p className="lg:w-[70%] lg:text-lg mb-4">
+              CEA NIT Raipur is the cornerstone of the Civil Engineering Department
+              at the National Institute of Technology, Raipur. It serves as the principal
+              body responsible for orchestrating and executing various events and
+              activities within the Civil Engineering Department.
 
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+              CEA is the driving force behind various events and workshops aimed at
+              the development of civil engineering students. From organizing
+              academic seminars to professional skill-building sessions, CEA ensures
+              students receive a well-rounded help and preparation for their future
+              careers.
+            </p>
+            <p className="lg:w-[70%] lg:text-lg">
+              Additionally, CEA manages SPARDHA, a sports league exclusively for
+              Civil Engineering Students, fostering a sense of camaraderie and
+              sportsmanship within the department. By coordinating diverse
+              activities, CEA creates an inclusive and vibrant community where
+              students can learn, grow, and bond with their peers.
+              Through its efforts, CEA NIT Raipur strives to empower students to
+              excel academically, professionally, and socially, while promoting a
+              culture of collaboration and leadership in the field of civil engineering.
+            </p>
           </div>
         </div>
       </main>
@@ -146,36 +169,50 @@ function BentoGridSecondDemo() {
 }
 
 
-const Skeleton = () => (
+// const Skeleton = () => (
+//   <div className="relative w-full h-full rounded-xl overflow-hidden">
+//     <Image
+//       src="/images/bg.jpg"
+//       alt="skeleton image"
+//       layout="fill"
+//       objectFit="covers"
+//       className="rounded-md"
+//     />
+//   </div>
+// )
+
+const Skeleton = ({ src }: { src: string }) => (
   <div className="relative w-full h-full rounded-xl overflow-hidden">
     <Image
-      src="/images/bg.jpg"
+      src={src}
       alt="skeleton image"
       layout="fill"
-      objectFit="covers"
+      objectFit="cover"
       className="rounded-md"
     />
   </div>
-)
+);
+
+
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
+    title: "GATE Mock Examination [Ongoing*]",
+    description: "CEA gate mock exmination.",
+    header: <Skeleton src="/images/gate.png" />,
     className: "md:col-span-2",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
+    title: "SPARDHA",
+    description: "cricket Trounament.",
+    header: <Skeleton src="/images/cricket.jpeg" />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
+    header: <Skeleton src="/images/mag.png" />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
@@ -183,7 +220,7 @@ const items = [
     title: "The Power of Communication",
     description:
       "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
+    header: <Skeleton src="/images/gate-2023.jpeg" />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
